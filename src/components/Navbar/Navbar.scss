@@ -1,0 +1,131 @@
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+}
+
+/* DARK MODE NAVBAR */
+.dark-theme .app__navbar {
+  background: rgba(10, 10, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;   // THIS adds spacing
+
+  li {
+    list-style: none;
+  }
+
+  li a {
+    color: var(--gray-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.app__navbar-menu div {
+  background-color: var(--white-color);
+}
+
+/* DARK MODE MOBILE MENU */
+.dark-theme .app__navbar-menu div {
+  background-color: #0f172a;
+}
+
+/* LOGO TEXT */
+.logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--black-color);
+}
+
+.dark-theme .logo-text {
+  color: white;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-li {
+  margin-left: 1rem;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+  }
+}
+
+.dark-theme .theme-toggle-btn {
+  color: #cbd5e1;
+
+  &:hover {
+    color: #fbbf24;
+  }
+}
+
+/* Mobile Theme Toggle */
+.mobile-theme-toggle {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .theme-toggle-li {
+    display: none;
+  }
+}

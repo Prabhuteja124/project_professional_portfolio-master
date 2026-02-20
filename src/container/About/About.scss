@@ -1,0 +1,163 @@
+.app__about {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  padding: 4rem 2rem;
+}
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .head-text {
+    margin-bottom: 0.5rem;
+
+    span {
+      color: #6366f1;
+    }
+  }
+}
+
+.about-tagline {
+  font-size: 1.1rem;
+  color: #6366f1;
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-description-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  .about-bio {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.highlights-section {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.highlights-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--black-color);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlight-card {
+  background: var(--white-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.highlight-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.highlight-number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #6366f1;
+  line-height: 1;
+}
+
+.highlight-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.highlight-sublabel {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+}
+
+@media screen and (max-width: 768px) {
+  .app__about {
+    padding: 2rem 1rem;
+  }
+
+  .about-description-card {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlight-card {
+    padding: 1.25rem;
+  }
+}
+
+// Dark theme styles
+.dark-theme {
+  .about-description-card {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+
+    .about-bio {
+      color: #cbd5e1;
+    }
+  }
+
+  .highlights-title {
+    color: white;
+  }
+
+  .highlight-card {
+    background: #1f2937;
+    border-color: rgba(99, 102, 241, 0.2);
+  }
+
+  .highlight-label {
+    color: white;
+  }
+}
